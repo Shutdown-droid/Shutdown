@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+  <title>
+   JogjaTour.com
+  </title>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+ </head>
+ <body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow sticky top-0 z-30">
+   <div class="container mx-auto px-4 flex items-center justify-between h-16">
+    <div class="text-2xl font-bold text-red-600 select-none">
+     Joglo
+    </div>
+    <nav class="hidden md:block">
+     <ul class="flex space-x-8 text-gray-700 font-medium">
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Beranda
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Tempat Wisata
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Galeri
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Buku Tamu
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <button class="hidden md:inline-block bg-red-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-red-700 transition" type="button">
+     Pesan Perjalanan
+    </button>
+    <button aria-label="Open menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-600" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+    <ul class="flex flex-col space-y-2 p-4 text-gray-700 font-medium">
+     <li>
+      <a class="block px-3 py-2 rounded hover:bg-red-100" href="#">
+       Beranda
+      </a>
+     </li>
+     <li>
+      <a class="block px-3 py-2 rounded hover:bg-red-100" href="#">
+       Tempat Wisata
+      </a>
+     </li>
+     <li>
+      <a class="block px-3 py-2 rounded hover:bg-red-100" href="#">
+       Galeri
+      </a>
+     </li>
+     <li>
+      <a class="block px-3 py-2 rounded hover:bg-red-100" href="#">
+       Buku Tamu
+      </a>
+     </li>
+     <li>
+      <button class="w-full bg-red-600 text-white px-3 py-2 rounded font-semibold hover:bg-red-700 transition" type="button">
+       Pesan Perjalanan
+      </button>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <main>
+   <section aria-label="Explore The Beauty of Yogyakarta" class="hero-wrapper relative mb-10" role="banner">
+    <img src="img/keratron.jpg">
+    <div class="hero-overlay px-6 sm:px-0">
+     <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 max-w-3xl mx-auto leading-tight">
+      Explore The Beauty of Yogyakarta
+     </h1>
+     <p class="text-base sm:text-lg max-w-xl mx-auto mb-4">
+      Jelajahi keajaiban budaya, alam, dan kuliner di kota istimewa Yogyakarta.
+     </p>
+     <a class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-md transition" href="#">
+      Lokasi
+     </a>
+    </div>
+   </section>
+   <section class="py-8 bg-white">
+    <div class="container mx-auto px-4">
+     <form aria-label="Site search form" class="search-container" role="search">
+      <input aria-label="Search" class="search-input" placeholder="Cari Sesuatu..." type="text"/>
+      <button aria-label="Search button" class="search-button" type="submit">
+       <i class="fas fa-search">
+       </i>
+       <span class="hidden sm:inline">
+        Cari
+       </span>
+      </button>
+     </form>
+    </div>
+   </section>
+   <section class="py-6 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+     <nav class="flex space-x-4 overflow-x-auto no-scrollbar">
+      <a aria-current="page" class="whitespace-nowrap px-4 py-2 rounded-full bg-red-600 text-white font-semibold shadow-md flex-shrink-0" href="#">
+       All
+      </a>
+      <a class="whitespace-nowrap px-4 py-2 rounded-full bg-white text-gray-700 border border-gray-300 hover:bg-red-50 hover:text-red-600 flex-shrink-0 transition" href="#">
+       Penginapan
+      </a>
+      <a class="whitespace-nowrap px-4 py-2 rounded-full bg-white text-gray-700 border border-gray-300 hover:bg-red-50 hover:text-red-600 flex-shrink-0 transition" href="#">
+       Kuliner
+      </a>
+      <a class="whitespace-nowrap px-4 py-2 rounded-full bg-white text-gray-700 border border-gray-300 hover:bg-red-50 hover:text-red-600 flex-shrink-0 transition" href="#">
+       Wisata
+      </a>
+      <a class="whitespace-nowrap px-4 py-2 rounded-full bg-white text-gray-700 border border-gray-300 hover:bg-red-50 hover:text-red-600 flex-shrink-0 transition" href="#">
+       Perjalanan
+      </a>
+     </nav>
+    </div>
+   </section>
+   <section class="py-8">
+    <div class="container mx-auto px-4 max-w-6xl relative">
+     <div aria-label="Popular destinations carousel" class="flex space-x-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory max-w-full mx-auto pt-6" id="carousel" tabindex="0">
+      <article aria-label="Destination Taman Sari, rating 4.7 stars" class="carousel-item destination-card bg-white rounded-lg shadow-sm relative overflow-hidden flex-shrink-0" role="group" style="width: 20rem;" tabindex="0">
+       <div class="relative">
+       <img src="img/Taman Sari.jpg">
+        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-semibold rounded-full px-3 py-1 flex items-center space-x-1">
+         <span class="text-yellow-400">
+          ★
+         </span>
+         <span>
+          4.7
+         </span>
+        </div>
+       </div>
+       <div class="p-4">
+        <h3 class="text-gray-900 font-semibold text-base mb-1">
+         Taman Sari
+        </h3>
+        <p class="text-gray-400 text-xs">
+         Asia Subtitle
+        </p>
+       </div>
+      </article>
+      <article aria-label="Destination Malioboro, rating 4.7 stars" class="carousel-item destination-card bg-white rounded-lg shadow-sm relative overflow-hidden flex-shrink-0 flex flex-col" role="group" style="width: 20rem;" tabindex="0">
+       <div class="relative">
+        <img alt="Malioboro street with crowds and shops at night in Yogyakarta" class="w-full h-48 object-cover rounded-t-lg" height="200" src="https://storage.googleapis.com/a1aa/image/ba4388e5-fa1f-457f-7182-1cabe8ce2db9.jpg" width="320"/>
+        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-semibold rounded-full px-3 py-1 flex items-center space-x-1">
+         <span class="text-yellow-400">
+          ★
+         </span>
+         <span>
+          4.7
+         </span>
+        </div>
+       </div>
+       <div class="p-4 flex-grow">
+        <h3 class="text-gray-900 font-semibold text-base mb-1">
+         Malioboro
+        </h3>
+        <p class="text-gray-400 text-xs mb-6">
+         Asia Subtitle
+        </p>
+       </div>
+      </article>
+      <article aria-label="Destination Benteng Vern Deburg, rating 4.7 stars" class="carousel-item destination-card bg-white rounded-lg shadow-sm relative overflow-hidden flex-shrink-0" role="group" style="width: 20rem;" tabindex="0">
+       <div class="relative">
+        <img alt="Benteng Vredeburg fortress historic building in Yogyakarta" class="w-full h-48 object-cover rounded-t-lg" height="200" src="https://storage.googleapis.com/a1aa/image/f946790a-159a-4469-d1c3-c6fa2e9d5c6c.jpg" width="320"/>
+        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-semibold rounded-full px-3 py-1 flex items-center space-x-1">
+         <span class="text-yellow-400">
+          ★
+         </span>
+         <span>
+          4.7
+         </span>
+        </div>
+       </div>
+       <div class="p-4">
+        <h3 class="text-gray-900 font-semibold text-base mb-1">
+         Benteng Vern Deburg
+        </h3>
+        <p class="text-gray-400 text-xs">
+         Asia Subtitle
+        </p>
+       </div>
+      </article>
+      <article aria-label="Destination Tugu Jogja, rating 4.7 stars" class="carousel-item destination-card bg-white rounded-lg shadow-sm relative overflow-hidden flex-shrink-0" role="group" style="width: 20rem;" tabindex="0">
+       <div class="relative">
+        <img alt="Tugu Jogja monument with blue sky background in Yogyakarta" class="w-full h-48 object-cover rounded-t-lg" height="200" src="https://storage.googleapis.com/a1aa/image/efb053d9-ed5a-474e-f85a-cd56895fc0d8.jpg" width="320"/>
+        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-semibold rounded-full px-3 py-1 flex items-center space-x-1">
+         <span class="text-yellow-400">
+          ★
+         </span>
+         <span>
+          4.7
+         </span>
+        </div>
+       </div>
+       <div class="p-4">
+        <h3 class="text-gray-900 font-semibold text-base mb-1">
+         Tugu Jogja
+        </h3>
+        <p class="text-gray-400 text-xs">
+         Asia Subtitle
+        </p>
+       </div>
+      </article>
+      <article aria-label="Destination Keraton Yogyakarta, rating 4.7 stars" class="carousel-item destination-card bg-white rounded-lg shadow-sm relative overflow-hidden flex-shrink-0" role="group" style="width: 20rem;" tabindex="0">
+       <div class="relative">
+        <img alt="Keraton Yogyakarta palace with traditional Javanese architecture" class="w-full h-48 object-cover rounded-t-lg" height="200" src="https://storage.googleapis.com/a1aa/image/54e40a2f-e035-497e-3312-3dfcf691c5bb.jpg" width="320"/>
+        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-semibold rounded-full px-3 py-1 flex items-center space-x-1">
+         <span class="text-yellow-400">
+          ★
+         </span>
+         <span>
+          4.7
+         </span>
+        </div>
+       </div>
+       <div class="p-4">
+        <h3 class="text-gray-900 font-semibold text-base mb-1">
+         Keraton Yogyakarta
+        </h3>
+        <p class="text-gray-400 text-xs">
+         Asia Subtitle
+        </p>
+       </div>
+      </article>
+     </div>
+     <div aria-label="Carousel navigation" class="carousel-navigation" role="group">
+      <button aria-label="Previous Destination" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:shadow-lg transition" id="prevBtn" type="button">
+       <i class="fas fa-chevron-left text-gray-700">
+       </i>
+      </button>
+      <button aria-label="Next Destination" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:shadow-lg transition" id="nextBtn" type="button">
+       <i class="fas fa-chevron-right text-gray-700">
+       </i>
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+     <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">
+       Galeri
+      </h2>
+      <a class="flex items-center space-x-1 text-blue-600 hover:underline font-semibold" href="#">
+       Lainnya
+       <i class="fas fa-chevron-right">
+       </i>
+      </a>
+     </div>
+     <div aria-label="Gallery Pinterest style layout" class="gallery-pinterest">
+      <article aria-label="Gallery image 1 showing a scenic view of Yogyakarta tourism spot with lush greenery and traditional buildings" class="gallery-pinterest-item" role="article" tabindex="0">
+       <img alt="Gallery image 1 showing a scenic view of Yogyakarta tourism spot with lush greenery and traditional buildings" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a660d7c2-9beb-49f7-df8b-0160ce5e631d.jpg"/>
+       <div class="gallery-pinterest-info">
+        <h3 class="gallery-pinterest-title">
+         Scenic Yogyakarta Tourism Spot
+        </h3>
+        <p class="gallery-pinterest-subtitle">
+         Galeri
+        </p>
+       </div>
+      </article>
+      <article aria-label="Gallery image 2 showing a vibrant street market in Yogyakarta with colorful stalls and people" class="gallery-pinterest-item" role="article" tabindex="0">
+       <img alt="Gallery image 2 showing a vibrant street market in Yogyakarta with colorful stalls and people" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9975e9f9-dd36-4925-bb46-3107c25fab61.jpg"/>
+       <div class="gallery-pinterest-info">
+        <h3 class="gallery-pinterest-title">
+         Vibrant Street Market
+        </h3>
+        <p class="gallery-pinterest-subtitle">
+         Galeri
+        </p>
+       </div>
+      </article>
+      <article aria-label="Gallery image 3 showing traditional Javanese dancers performing in Yogyakarta" class="gallery-pinterest-item" role="article" tabindex="0">
+       <img alt="Gallery image 3 showing traditional Javanese dancers performing in Yogyakarta" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1db541d2-60a3-4e13-1452-6f59d4410dd7.jpg"/>
+       <div class="gallery-pinterest-info">
+        <h3 class="gallery-pinterest-title">
+         Traditional Javanese Dance
+        </h3>
+        <p class="gallery-pinterest-subtitle">
+         Galeri
+        </p>
+       </div>
+      </article>
+      <article aria-label="Gallery image 4 showing a sunset view over the Prambanan temple complex in Yogyakarta" class="gallery-pinterest-item" role="article" tabindex="0">
+       <img alt="Gallery image 4 showing a sunset view over the Prambanan temple complex in Yogyakarta" loading="lazy" src="https://storage.googleapis.com/a1aa/image/737cdf13-acd5-45df-54b9-caa617efe498.jpg"/>
+       <div class="gallery-pinterest-info">
+        <h3 class="gallery-pinterest-title">
+         Sunset at Prambanan Temple
+        </h3>
+        <p class="gallery-pinterest-subtitle">
+         Galeri
+        </p>
+       </div>
+      </article>
+      <article aria-label="Gallery image 5 showing local cuisine dishes served in traditional style in Yogyakarta" class="gallery-pinterest-item" role="article" tabindex="0">
+       <img alt="Gallery image 5 showing local cuisine dishes served in traditional style in Yogyakarta" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e3b28d56-cb99-4fdf-5a7f-495ac107ec96.jpg"/>
+       <div class="gallery-pinterest-info">
+        <h3 class="gallery-pinterest-title">
+         Local Cuisine Dishes
+        </h3>
+        <p class="gallery-pinterest-subtitle">
+         Galeri
+        </p>
+       </div>
+      </article>
+      <article aria-label="Gallery image 6 showing a panoramic view of Mount Merapi volcano near Yogyakarta" class="gallery-pinterest-item" role="article" tabindex="0">
+       <img alt="Gallery image 6 showing a panoramic view of Mount Merapi volcano near Yogyakarta" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c52d883e-de7b-4ef3-68af-75331ca32c55.jpg"/>
+       <div class="gallery-pinterest-info">
+        <h3 class="gallery-pinterest-title">
+         Mount Merapi Panorama
+        </h3>
+        <p class="gallery-pinterest-subtitle">
+         Galeri
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+     <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">
+       Artikel
+      </h2>
+      <a class="flex items-center space-x-1 text-blue-600 hover:underline font-semibold" href="#">
+       lainnya
+       <i class="fas fa-chevron-right">
+       </i>
+      </a>
+     </div>
+     <div aria-label="Articles grid with 6 articles" class="artikel-grid-3col">
+      <article aria-label="Artikel 1: 10 Rekomendasi Wisata Kuliner di Indonesia" class="artikel-card-small" role="article" tabindex="0">
+       <img alt="Indonesian culinary tourism with delicious traditional dishes" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9c7e6761-ad09-4097-ae62-ffd3e7e69b0c.jpg"/>
+       <div class="artikel-info-small">
+        <h3 class="artikel-title-small">
+         10 Rekomendasi Wisata Kuliner di Indonesia
+        </h3>
+        <p class="artikel-meta-small">
+         26 Juli 2023
+        </p>
+        <p class="artikel-desc-small">
+         Yang Nikmat di Lidah, Langsung Kenyang di Perut, Harga Terjangkau di Kantong.
+        </p>
+       </div>
+      </article>
+      <article aria-label="Artikel 2: Jelajah Kuliner Jateng &amp; Jogja" class="artikel-card-small" role="article" tabindex="0">
+       <img alt="Central Java and Yogyakarta culinary exploration with traditional dishes" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f492f292-51c9-40f4-1ffc-932cc264fed1.jpg"/>
+       <div class="artikel-info-small">
+        <h3 class="artikel-title-small">
+         Jelajah Kuliner Jateng &amp; Jogja
+        </h3>
+        <p class="artikel-meta-small">
+         27 Juli 2023
+        </p>
+        <p class="artikel-desc-small">
+         Berbagai macam hidangan khas Jawa Tengah dan Yogyakarta yang menggugah selera...
+        </p>
+       </div>
+      </article>
+      <article aria-label="Artikel 3: Pakaian Adat: Arti, Contoh, dan Fungsinya" class="artikel-card-small" role="article" tabindex="0">
+       <img alt="Traditional clothing of Indonesia with cultural meanings and examples" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eb8c86a9-86cf-4e96-a7b5-89ca65fc583f.jpg"/>
+       <div class="artikel-info-small">
+        <h3 class="artikel-title-small">
+         Pakaian Adat: Arti, Contoh, dan Fungsinya
+        </h3>
+        <p class="artikel-meta-small">
+         20 Juni 2023
+        </p>
+        <p class="artikel-desc-small">
+         Mengenal lebih dalam tentang keberagaman pakaian adat di Indonesia...
+        </p>
+       </div>
+      </article>
+      <article aria-label="Artikel 4: Filosofi Tari Pendet Berdasarkan Sejarah Budaya Bali!" class="artikel-card-small" role="article" tabindex="0">
+       <img alt="Philosophy of Pendet dance based on Balinese cultural history" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fb45fedc-399e-4a12-503f-4a0f1cae3f64.jpg"/>
+       <div class="artikel-info-small">
+        <h3 class="artikel-title-small">
+         Filosofi Tari Pendet Berdasarkan Sejarah Budaya Bali!
+        </h3>
+        <p class="artikel-meta-small">
+         15 Juni 2023
+        </p>
+        <p class="artikel-desc-small">
+         Mengungkap makna mendalam di balik setiap gerakan Tari Pendet...
+        </p>
+       </div>
+      </article>
+      <article aria-label="Artikel 5: Keindahan Alam Yogyakarta" class="artikel-card-small" role="article" tabindex="0">
+       <img alt="Beautiful natural landscapes of Yogyakarta with mountains and rivers" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ed99035e-b1b2-481b-3440-75a1899b972a.jpg" width="600"/>
+       <div class="artikel-info-small">
+        <h3 class="artikel-title-small">
+         Keindahan Alam Yogyakarta
+        </h3>
+        <p class="artikel-meta-small">
+         10 Mei 2023
+        </p>
+        <p class="artikel-desc-small">
+         Menjelajahi keindahan alam yang memukau di sekitar Yogyakarta.
+        </p>
+       </div>
+      </article>
+      <article aria-label="Artikel 6: Festival Budaya Jogja" class="artikel-card-small" role="article" tabindex="0">
+       <img alt="Colorful cultural festival in Yogyakarta with traditional costumes and performances" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7adbf342-af8b-4167-458a-21ff4a76c652.jpg" width="600"/>
+       <div class="artikel-info-small">
+        <h3 class="artikel-title-small">
+         Festival Budaya Jogja
+        </h3>
+        <p class="artikel-meta-small">
+         5 April 2023
+        </p>
+        <p class="artikel-desc-small">
+         Merayakan kekayaan budaya melalui festival tahunan di Yogyakarta.
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+    <section class="py-8 bg-white">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Buku Tamu</h2>
+        <form class="bg-gray-100 p-4 rounded-md shadow-md">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700">Nama:</label>
+            <input type="text" id="name" class="border border-gray-300 p-2 w-full rounded" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-gray-700">Pesan:</label>
+            <textarea id="message" class="border border-gray-300 p-2 w-full rounded" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700">Kirim</button>
+        </form>
+      </div>
+    </section>
+   </section>
+  </main>
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Azamin.com All rights reserved.</p>
+      <p>Kontak: info@Azamin.com | Telepon: 083821337056</p>
+      <div class="flex justify-center space-x-4 mt-2">
+        <a href="#" class="text-white hover:text-red-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white hover:text-red-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white hover:text-red-400"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
